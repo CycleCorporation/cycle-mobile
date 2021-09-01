@@ -1,0 +1,47 @@
+<svg id="Organe_top_shape" data-name="Organe top shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="382.001" viewBox="0 0 375 382.001">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4a4b4d;
+        opacity: 0.35;
+      }
+
+      .cls-2 {
+        fill: #2169ff;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        opacity: 0.14;
+      }
+
+      .cls-5 {
+        opacity: 0.21;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="Subtração_3" data-name="Subtração 3" class="cls-1" d="M7657,877h-67a16.991,16.991,0,0,1-16.884-15h-.217a87.437,87.437,0,0,0-172.8,0h-.219A16.988,16.988,0,0,1,7383,877h-67a16.991,16.991,0,0,1-16.885-15H7299V495h375V862h-.118A16.988,16.988,0,0,1,7657,877Z" transform="translate(-7299 -495)"/>
+    </clipPath>
+  </defs>
+  <path id="Shaped_subtraction" data-name="Shaped subtraction" class="cls-2" d="M7657,877h-67a16.991,16.991,0,0,1-16.884-15h-.217a87.437,87.437,0,0,0-172.8,0h-.219A16.988,16.988,0,0,1,7383,877h-67a16.991,16.991,0,0,1-16.885-15H7299V495h375V862h-.118A16.988,16.988,0,0,1,7657,877Z" transform="translate(-7299 -495)"/>
+  <g id="Background_objects" data-name="Background objects" class="cls-3" transform="translate(0 0)">
+    <g id="background_objects-2" data-name="background objects">
+      <circle id="Elipse_3" data-name="Elipse 3" class="cls-4" cx="89" cy="89" r="89" transform="translate(-61 -55)"/>
+      <circle id="Elipse_5" data-name="Elipse 5" class="cls-4" cx="144.5" cy="144.5" r="144.5" transform="translate(166 -159)"/>
+      <circle id="Elipse_4" data-name="Elipse 4" class="cls-4" cx="52.5" cy="52.5" r="52.5" transform="translate(21 77)"/>
+      <circle id="Elipse_119" data-name="Elipse 119" class="cls-4" cx="52.5" cy="52.5" r="52.5" transform="translate(309 173)"/>
+      <circle id="Elipse_6" data-name="Elipse 6" class="cls-5" cx="9" cy="9" r="9" transform="translate(151 118)"/>
+      <circle id="Elipse_8" data-name="Elipse 8" class="cls-5" cx="6.5" cy="6.5" r="6.5" transform="translate(153 219)"/>
+      <circle id="Elipse_9" data-name="Elipse 9" class="cls-5" cx="10.5" cy="10.5" r="10.5" transform="translate(361 328)"/>
+      <circle id="Elipse_7" data-name="Elipse 7" class="cls-5" cx="14.5" cy="14.5" r="14.5" transform="translate(224 130)"/>
+      <circle id="Elipse_2" data-name="Elipse 2" class="cls-4" cx="116" cy="116" r="116" transform="translate(-88 219)"/>
+    </g>
+  </g>
+</svg>
