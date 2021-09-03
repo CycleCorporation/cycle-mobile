@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-	Wrapper,
+	Container,
 	Description,
 	ButtonWrapper,
 	CriarContaButton,
@@ -15,7 +15,7 @@ import { widthPixel, heightPixel } from '../../utils/pixelSize';
 
 export function StartScreen() {
 	return (
-		<Wrapper>
+		<Container>
 			<StatusBar
 				barStyle="light-content"
 				translucent
@@ -46,6 +46,6 @@ export function StartScreen() {
 					<CriarContaButtonText>Criar conta</CriarContaButtonText>
 				</CriarContaButton>
 			</ButtonWrapper>
-		</Wrapper>
+		</Container>
 	);
 }

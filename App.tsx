@@ -1,5 +1,6 @@
 import React from 'react';
 import { StartScreen } from './src/screens/StartScreen';
+import { Cadastro } from './src/screens/Cadastro';
 import AppLoading from 'expo-app-loading';
 import {
 	useFonts,
@@ -16,6 +17,6 @@ export default function App() {
 	if (!fontsLoaded) {
 		return <AppLoading />;
 	} else {
-		return <StartScreen />;
+		return <Cadastro />;
 	}
 }

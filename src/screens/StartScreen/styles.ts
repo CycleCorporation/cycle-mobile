@@ -7,7 +7,7 @@ import {
 	heightPixel,
 } from '../../utils/pixelSize';
 
-export const Wrapper = styled.SafeAreaView`
+export const Container = styled.SafeAreaView`
 	flex: 1;
 `;
 
