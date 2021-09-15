@@ -4,6 +4,8 @@ import { fontPixel, heightPixel, widthPixel } from '../../utils/pixelSize';
 export const Container = styled.SafeAreaView`
 	flex: 1;
 	padding-bottom: 42px;
+	background: #fff;
+	padding-top: ${heightPixel(100)}px;
 `;
 
 export const Title = styled.Text`

@@ -12,12 +12,15 @@ import LogoSvg from '../../assets/logo.svg';
 import Banner from '../../assets/banner.svg';
 import { View, StatusBar } from 'react-native';
 import { widthPixel, heightPixel } from '../../utils/pixelSize';
+import { useNavigation } from '@react-navigation/core';
 
 export function StartScreen() {
+	const navigation = useNavigation<any>();
+
 	return (
 		<Container>
 			<StatusBar
-				barStyle="light-content"
+				barStyle="dark-content"
 				translucent
 				backgroundColor="transparent"
 			/>
@@ -39,10 +42,18 @@ export function StartScreen() {
 			</Description>
 
 			<ButtonWrapper>
-				<LoginButton activeOpacity={0.6} style={{ elevation: 3 }}>
+				<LoginButton
+					onPress={() => navigation.navigate('Login')}
+					activeOpacity={0.6}
+					style={{ elevation: 3 }}
+				>
 					<LoginButtonText>Login</LoginButtonText>
 				</LoginButton>
-				<CriarContaButton activeOpacity={0.6} style={{ elevation: 3 }}>
+				<CriarContaButton
+					onPress={() => navigation.navigate('Cadastro')}
+					activeOpacity={0.6}
+					style={{ elevation: 3 }}
+				>
 					<CriarContaButtonText>Criar conta</CriarContaButtonText>
 				</CriarContaButton>
 			</ButtonWrapper>

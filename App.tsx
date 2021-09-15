@@ -1,7 +1,5 @@
 import React from 'react';
-import { StartScreen } from './src/screens/StartScreen';
-import { Cadastro } from './src/screens/Cadastro';
-import { Login } from './src/screens/Login';
+import { Routes } from './src/routes';
 import AppLoading from 'expo-app-loading';
 import {
 	useFonts,
@@ -18,6 +16,6 @@ export default function App() {
 	if (!fontsLoaded) {
 		return <AppLoading />;
 	} else {
-		return <Login />;
+		return <Routes />;
 	}
 }

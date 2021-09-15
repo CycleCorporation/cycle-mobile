@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { Platform } from 'react-native';
 import {
 	fontPixel,
 	pixelSizeVertical,
@@ -9,6 +10,7 @@ import {
 
 export const Container = styled.SafeAreaView`
 	flex: 1;
+	background: #fff;
 `;
 
 export const Description = styled.Text`

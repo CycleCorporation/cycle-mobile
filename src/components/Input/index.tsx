@@ -1,19 +1,13 @@
-import React, { forwardRef, useRef } from 'react';
-import { TextInputProps } from 'react-native';
-import { InputText, Container } from './styles';
+import React from 'react';
+import { styles } from './styles';
+import { TextInputProps, TextInput } from 'react-native';
 
-interface InputValueReference {
-	value: string;
+interface InputProps extends TextInputProps {
+	errors?: boolean;
 }
 
-function Input({ ...rest }: TextInputProps) {
-	// const inputValueRef = useRef<InputValueReference>({ value: defa });
-
+export function Input({ errors, ...rest }: InputProps) {
 	return (
-		<Container>
-			<InputText {...rest} />
-		</Container>
+		<TextInput style={[styles.container, errors && styles.errors]} {...rest} />
 	);
 }
-
-export default Input;
