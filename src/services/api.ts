@@ -4,3 +4,6 @@ export const api = axios.create({
 	baseURL: 'http://localhost:3333',
 });
 
+export const apiBuscaCEP = axios.create({
+	baseURL: 'https://viacep.com.br/ws',
+});

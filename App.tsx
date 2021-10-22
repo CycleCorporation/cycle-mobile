@@ -5,10 +5,13 @@ import {
 	useFonts,
 	Roboto_400Regular,
 	Roboto_500Medium,
+	Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
+import { AppProvider } from './src/hooks';
 
 export default function App() {
 	let [fontsLoaded] = useFonts({
+		Roboto_700Bold,
 		Roboto_400Regular,
 		Roboto_500Medium,
 	});
@@ -16,6 +19,10 @@ export default function App() {
 	if (!fontsLoaded) {
 		return <AppLoading />;
 	} else {
-		return <Routes />;
+		return (
+			<AppProvider>
+				<Routes />
+			</AppProvider>
+		);
 	}
 }

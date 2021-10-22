@@ -8,7 +8,7 @@ import {
 	CriarContaButtonText,
 	LoginButtonText,
 } from './styles';
-import LogoSvg from '../../assets/logo.svg';
+import LogoSvg from '../../assets/logoJob.svg';
 import Banner from '../../assets/banner.svg';
 import { View, StatusBar } from 'react-native';
 import { widthPixel, heightPixel } from '../../utils/pixelSize';
@@ -27,10 +27,10 @@ export function StartScreen() {
 			<View>
 				<Banner width={widthPixel(415)} height={heightPixel(464)} />
 				<LogoSvg
-					width="36%"
+					width="42%"
 					style={{
 						position: 'absolute',
-						top: '90%',
+						top: '-14%',
 						alignSelf: 'center',
 					}}
 				/>

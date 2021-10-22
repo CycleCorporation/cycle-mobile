@@ -3,9 +3,8 @@ import { fontPixel, heightPixel, widthPixel } from '../../utils/pixelSize';
 
 export const Container = styled.SafeAreaView`
 	flex: 1;
-	padding-bottom: 42px;
+	justify-content: center;
 	background: #fff;
-	padding-top: ${heightPixel(100)}px;
 `;
 
 export const Title = styled.Text`
@@ -37,4 +36,11 @@ export const LoginButtonText = styled.Text`
 	font-family: 'Roboto_500Medium';
 	font-size: ${fontPixel(20)}px;
 	font-weight: bold;
+`;
+
+export const ErrorText = styled.Text`
+	font-family: 'Roboto_400Regular';
+	color: #ff6961;
+	font-size: ${fontPixel(16)}px;
+	margin-left: 40px;
 `;

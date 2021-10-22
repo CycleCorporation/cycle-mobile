@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StartScreen } from '../screens/StartScreen';
 import { Login } from '../screens/Login';
 import { Cadastro } from '../screens/Cadastro';
+import { useAuth } from '../hooks/auth';
 
 const Stack = createStackNavigator();
 
-export function StackRoutes() {
+export function AuthRoutes() {
+	const { checkOnboarding } = useAuth();
+
+	useEffect(() => {
+		checkOnboarding();
+	}, []);
 	return (
 		<>
 			<Stack.Navigator

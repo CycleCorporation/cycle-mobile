@@ -52,3 +52,10 @@ export const ErrorText = styled.Text`
 	font-size: ${fontPixel(16)}px;
 	margin-left: 40px;
 `;
+
+export const ButtonWrapper = styled.View`
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 20px;
+`;
