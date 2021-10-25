@@ -14,3 +14,20 @@ export const FilterTitle = styled.Text`
 	padding-left: 10px;
 	padding-bottom: 8px;
 `;
+
+export const TitleListContainer = styled.View`
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin: 30px;
+`;
+
+export const TitleListTitle = styled.Text`
+	font-size: 20px;
+	color: #4a4b4d;
+`;
+
+export const TitleListSubtitle = styled.Text`
+	font-size: 13px;
+	color: #00cdff;
+`;

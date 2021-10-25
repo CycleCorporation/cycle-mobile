@@ -18,8 +18,8 @@ export function TabApp() {
 					position: 'absolute',
 					elevation: 20,
 					height: 54,
-					borderTopStartRadius: 35,
-					borderTopEndRadius: 35,
+					borderTopStartRadius: 50,
+					borderTopEndRadius: 50,
 				},
 
 				headerShown: false,
