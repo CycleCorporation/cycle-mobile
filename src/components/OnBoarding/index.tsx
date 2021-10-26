@@ -29,7 +29,7 @@ export const OnBoarding = () => {
 		} else {
 			try {
 				await AsyncStorage.setItem('@viewedOnboarding', user.email);
-				navigation.navigate('Home');
+				navigation.navigate('TabApp');
 			} catch (error) {
 				console.log('Error @checkOnboarding', error);
 			}
