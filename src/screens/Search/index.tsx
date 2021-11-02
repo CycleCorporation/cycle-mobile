@@ -10,7 +10,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import IconBack from 'react-native-vector-icons/Ionicons';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { api } from '../../services/api';
-import { Rating, AirbnbRating } from 'react-native-ratings';
+import { AirbnbRating } from 'react-native-ratings';
 
 export const Search = ({ navigation }) => {
 	const [input, setInput] = useState('');
@@ -51,7 +51,7 @@ export const Search = ({ navigation }) => {
 	}, []);
 
 	return (
-		<SafeAreaView>
+		<SafeAreaView style={{ backgroundColor: '#fff', flex: 1 }}>
 			<SearchContainer>
 				<BorderlessButton
 					rippleColor="#c7c7c7"
@@ -82,7 +82,10 @@ export const Search = ({ navigation }) => {
 				style={{ marginTop: 40 }}
 				keyExtractor={(prestador) => prestador.id}
 				renderItem={({ item }) => (
-					<PrestadorContainer rippleColor="#dddddd">
+					<PrestadorContainer
+						onPress={() => navigation.navigate('Profissional', { item })}
+						rippleColor="#dddddd"
+					>
 						<Image
 							source={{ uri: `${imageUrl}/${item.user.user_image}` }}
 							style={{ width: 60, height: 60, borderRadius: 30 }}

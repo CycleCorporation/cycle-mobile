@@ -29,7 +29,7 @@ export function More({ navigation }: any) {
 			</Title>
 
 			<MainContent>
-				<OptionsContainer>
+				<OptionsContainer onPress={() => navigation.navigate('TermoDeUso')}>
 					<IconContainer>
 						<Ionicons name="md-newspaper" size={26} color="#4A4B4D" />
 					</IconContainer>
@@ -39,7 +39,7 @@ export function More({ navigation }: any) {
 					</IconRigth>
 				</OptionsContainer>
 
-				<OptionsContainer>
+				<OptionsContainer onPress={() => navigation.navigate('SobreNos')}>
 					<IconContainer>
 						<Fontisto name="info" size={26} color="#4A4B4D" />
 					</IconContainer>
