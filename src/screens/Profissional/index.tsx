@@ -18,7 +18,7 @@ import {
 	PrecoMedioValue,
 	WhatsappButton,
 } from './styles';
-import { Image, Text } from 'react-native';
+import { Image, Linking, Text } from 'react-native';
 import { AirbnbRating } from 'react-native-ratings';
 import { FontAwesome5 } from '@expo/vector-icons';
 
@@ -28,6 +28,9 @@ export const Profissional = () => {
 	const { item } = params;
 
 	const imageUrl = 'http://localhost:3333/files';
+	function handleLinkToWhatsapp() {
+		Linking.openURL(`whatsapp://send?phone=${item.user.telephone}`);
+	}
 
 	return (
 		<Container showsVerticalScrollIndicator={false}>
@@ -71,7 +74,7 @@ export const Profissional = () => {
 					<FontAwesome5 name="hand-holding-usd" size={28} color="white" />
 				</ContratarButton>
 
-				<WhatsappButton>
+				<WhatsappButton onPress={handleLinkToWhatsapp}>
 					<ButtonText>Negocie</ButtonText>
 					<FontAwesome5 name="whatsapp" size={28} color="white" />
 				</WhatsappButton>

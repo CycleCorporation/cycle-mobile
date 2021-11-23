@@ -55,8 +55,9 @@ export function TabApp() {
 							!focused && <Text style={styles.tabLabel}>Meus Serviços</Text>
 						);
 					},
+					headerShown: true,
 				}}
-				name="Servicos"
+				name="Meus Serviços"
 				component={Servicos}
 			/>
 			<Tab.Screen
