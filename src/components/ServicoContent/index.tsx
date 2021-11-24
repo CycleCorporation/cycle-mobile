@@ -9,15 +9,36 @@ import {
 	StatusTitle,
 	StatusInfoText,
 } from './styles';
-import fotoPerfil from '../../assets/design.png';
+import tecnico from '../../assets/tecnico.png';
+import cozinheiro from '../../assets/cozinheiro.png';
+import eletricista from '../../assets/eletricista.png';
+import domesticos from '../../assets/domesticos.png';
+import pedreiro from '../../assets/pedreiro.png';
 
-export function ServicoContent() {
+export type ServicoProps = {
+	id: string;
+	nome_prestador: string;
+	nome_profissao: string;
+	nome_servico: string;
+	status: number;
+	image: string;
+};
+
+export function ServicoContent({
+	nome_prestador,
+	nome_profissao,
+	nome_servico,
+	status,
+	image,
+}: ServicoProps) {
+	let imgUrl = `http://localhost:3333/files/${image}`;
+
 	return (
 		<Container style={{ elevation: 10 }}>
-			<Image source={fotoPerfil} style={{ width: 80, height: 80 }} />
+			<Image source={{ uri: imgUrl }} style={{ width: 85, height: 85 }} />
 			<InfoContainer>
-				<NomeText>Marcelo Almeida</NomeText>
-				<ProfissaoText>Designer</ProfissaoText>
+				<NomeText>{nome_servico}</NomeText>
+				<ProfissaoText>{nome_prestador}</ProfissaoText>
 
 				<StatusContainer>
 					<StatusTitle>Situação</StatusTitle>
@@ -43,7 +64,7 @@ export function ServicoContent() {
 							style={{
 								width: 60,
 								height: 1,
-								backgroundColor: '#707070',
+								backgroundColor: status !== 0 ? '#35F568' : '#707070',
 							}}
 						/>
 						<View
@@ -53,14 +74,14 @@ export function ServicoContent() {
 								borderRadius: 20,
 								borderWidth: 1,
 								backgroundColor: '#fff',
-								borderColor: '#707070',
+								borderColor: status !== 0 ? '#35F568' : '#707070',
 							}}
 						/>
 						<View
 							style={{
 								width: 60,
 								height: 1,
-								backgroundColor: '#707070',
+								backgroundColor: status === 2 ? '#35F568' : '#707070',
 							}}
 						/>
 						<View
@@ -70,7 +91,7 @@ export function ServicoContent() {
 								borderRadius: 20,
 								borderWidth: 1,
 								backgroundColor: '#fff',
-								borderColor: '#707070',
+								borderColor: status === 2 ? '#35F568' : '#707070',
 							}}
 						/>
 					</View>
