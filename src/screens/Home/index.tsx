@@ -189,7 +189,7 @@ export function Home() {
               activeOpacity={0.6}
             >
               <Image
-                source={{ uri: `http://localhost:3333/files/${item.image}` }}
+                source={{ uri: `http://192.168.158.250:3333/files/${item.image}` }}
                 style={{ width: 140, height: 140 }}
               />
               <Text

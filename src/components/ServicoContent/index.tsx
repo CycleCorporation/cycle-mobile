@@ -31,7 +31,7 @@ export function ServicoContent({
 	status,
 	image,
 }: ServicoProps) {
-	let imgUrl = `http://localhost:3333/files/${image}`;
+	let imgUrl = `http://192.168.158.250:3333/files/${image}`;
 
 	return (
 		<Container style={{ elevation: 10 }}>

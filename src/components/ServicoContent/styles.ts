@@ -14,7 +14,7 @@ export const Container = styled(RectButton)`
 `;
 
 export const InfoContainer = styled.View`
-	margin-left: 40px;
+	margin-left: 5px;
 	padding-bottom: 12px;
 `;
 

@@ -17,7 +17,7 @@ export const Search = ({ navigation }) => {
 	const textInputRef = useRef<TextInput>(null);
 	const [prestadores, setPrestadores] = useState<any[]>([]);
 
-	const imageUrl = 'http://localhost:3333/files';
+	const imageUrl = 'http://192.168.158.250:3333/files';
 
 	const handleSearch = async () => {
 		try {

@@ -78,21 +78,26 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
 	}, []);
 
 	const signIn = useCallback(async ({ email, password }: SignInCredentials) => {
-		const response = await api.post('/sessions', {
-			email,
-			password,
-		});
-
-		const { token, user } = response.data;
-
-		await AsyncStorage.multiSet([
-			['@Jobplus:token', token],
-			['@Jobplus:user', JSON.stringify(user)],
-		]);
-
-		api.defaults.headers.authorization = `Bearer ${token}`;
-
-		setData({ token, user });
+		try {
+			const response = await api.post('/sessions', {
+				email,
+				password,
+			});
+	
+			const { token, user } = response.data;
+	
+			await AsyncStorage.multiSet([
+				['@Jobplus:token', token],
+				['@Jobplus:user', JSON.stringify(user)],
+			]);
+	
+			api.defaults.headers.authorization = `Bearer ${token}`;
+	
+			setData({ token, user });		
+		} catch (error) {
+			console.log(error)
+		}
+	
 	}, []);
 
 	const signOut = useCallback(async () => {

@@ -23,7 +23,7 @@ export function Categoria() {
   const navigation = useNavigation<any>();
   const [prestadores, setPrestadores] = useState<any[]>([]);
 
-  const imageUrl = "http://localhost:3333/files";
+  const imageUrl = "http://192.168.158.250:3333/files";
 
   useEffect(() => {
     const handleSearch = async () => {

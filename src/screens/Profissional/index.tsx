@@ -27,9 +27,9 @@ export const Profissional = () => {
 
 	const { item } = params;
 
-	const imageUrl = 'http://localhost:3333/files';
+	const imageUrl = 'http://192.168.158.250:3333/files';
 	function handleLinkToWhatsapp() {
-		Linking.openURL(`whatsapp://send?phone=${item.user.telephone}`);
+		Linking.openURL(`whatsapp://send?phone=55${item.user.telephone}`);
 	}
 
 	return (
