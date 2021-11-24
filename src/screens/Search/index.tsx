@@ -11,13 +11,14 @@ import IconBack from 'react-native-vector-icons/Ionicons';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { api } from '../../services/api';
 import { AirbnbRating } from 'react-native-ratings';
+import { ipConfig } from '../../utils/ipVariable';
 
 export const Search = ({ navigation }) => {
 	const [input, setInput] = useState('');
 	const textInputRef = useRef<TextInput>(null);
 	const [prestadores, setPrestadores] = useState<any[]>([]);
 
-	const imageUrl = 'http://192.168.158.250:3333/files';
+	const imageUrl = `http://${ipConfig}/files`;
 
 	const handleSearch = async () => {
 		try {

@@ -14,6 +14,7 @@ import cozinheiro from '../../assets/cozinheiro.png';
 import eletricista from '../../assets/eletricista.png';
 import domesticos from '../../assets/domesticos.png';
 import pedreiro from '../../assets/pedreiro.png';
+import { ipConfig } from '../../utils/ipVariable';
 
 export type ServicoProps = {
 	id: string;
@@ -31,7 +32,7 @@ export function ServicoContent({
 	status,
 	image,
 }: ServicoProps) {
-	let imgUrl = `http://192.168.158.250:3333/files/${image}`;
+	let imgUrl = `http://${ipConfig}/files/${image}`;
 
 	return (
 		<Container style={{ elevation: 10 }}>

@@ -21,13 +21,14 @@ import {
 import { Image, Linking, Text } from 'react-native';
 import { AirbnbRating } from 'react-native-ratings';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { ipConfig } from '../../utils/ipVariable';
 
 export const Profissional = () => {
 	const { params } = useRoute<any>();
 
 	const { item } = params;
 
-	const imageUrl = 'http://192.168.158.250:3333/files';
+	const imageUrl = `http://${ipConfig}/files`;
 	function handleLinkToWhatsapp() {
 		Linking.openURL(`whatsapp://send?phone=55${item.user.telephone}`);
 	}

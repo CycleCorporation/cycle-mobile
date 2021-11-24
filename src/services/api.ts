@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { ipConfig } from '../utils/ipVariable';
 
 export const api = axios.create({
-	baseURL: 'http://192.168.158.250:3333',
+	baseURL: `http://${ipConfig}`,
 });
 
 export const apiBuscaCEP = axios.create({

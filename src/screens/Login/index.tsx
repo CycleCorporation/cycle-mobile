@@ -86,6 +86,7 @@ export function Login() {
 						onChangeText={onChange}
 						placeholder="Senha"
 						returnKeyType="send"
+						autoCapitalize="none"
 						secureTextEntry
 					/>
 				)}
