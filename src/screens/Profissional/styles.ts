@@ -4,7 +4,6 @@ import styled from 'styled-components/native';
 export const Container = styled.ScrollView`
 	flex: 1;
 	background: #fff;
-	padding: 20px;
 `;
 
 export const ImageContainer = styled.View`
@@ -41,7 +40,7 @@ export const DescriptionTitle = styled.Text`
 `;
 
 export const DescriptionInput = styled.View`
-	width: 100%;
+	width: 94%;
 	background: #f2f2f2;
 	height: 140px;
 	border-radius: 20px;
@@ -82,6 +81,17 @@ export const ContratarButton = styled(RectButton)`
 	justify-content: center;
 	flex-direction: row;
 `;
+
+export const ContratarModalButton = styled.TouchableOpacity`
+	width: 320px;
+	height: 58px;
+	background: #00cdff;
+	border-radius: 40px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+`;
+
 export const WhatsappButton = styled(RectButton)`
 	width: 320px;
 	height: 58px;

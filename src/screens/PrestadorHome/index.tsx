@@ -7,6 +7,7 @@ import {
 	FlatList,
 	Image,
 	RefreshControl,
+	Alert,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useAuth } from '../../hooks/auth';
@@ -15,6 +16,7 @@ import { api } from '../../services/api';
 import { ipConfig } from '../../utils/ipVariable';
 import { ActivityIndicator } from 'react-native-paper';
 import { AntDesign } from '@expo/vector-icons';
+import LottieView from 'lottie-react-native';
 
 type ServicoPrestadorProps = {
 	id: string;
@@ -61,11 +63,16 @@ export function PrestadorHome() {
 	}, [loading]);
 
 	async function onRefresh() {
-		setRefreshing(true);
-		const { data } = await api.get(`/servicos/prestador/${prestador_id}`);
+		try {
+			setRefreshing(true);
+			const { data } = await api.get(`/servicos/prestador/${prestador_id}`);
 
-		setServicos(data);
-		setRefreshing(false);
+			setServicos(data);
+			setRefreshing(false);
+		} catch (error) {
+			Alert.alert('Erro', 'Não foi possível buscar os serviços.');
+			setRefreshing(false);
+		}
 	}
 
 	if (loading) {
@@ -91,7 +98,25 @@ export function PrestadorHome() {
 			/>
 
 			{servicos.length === 0 ? (
-				<Text>NÃO possui serviços ainda</Text>
+				<View
+					style={{
+						height: '100%',
+						justifyContent: 'center',
+						alignItems: 'center',
+					}}
+				>
+					<LottieView
+						style={{
+							width: 200,
+							height: 200,
+							alignSelf: 'center',
+						}}
+						source={require('../../assets/animation/search.json')}
+						autoPlay
+						loop
+					/>
+					<Text>Nenhum serviço ativo</Text>
+				</View>
 			) : (
 				<>
 					<FlatList
@@ -131,11 +156,11 @@ export function PrestadorHome() {
 											fontFamily: 'Roboto_700Bold',
 										}}
 									>
-										{item.nome_cliente}
+										{item.nome_servico}
 									</Text>
 
 									<Text style={{ textAlign: 'center', marginBottom: 7 }}>
-										{item.nome_servico}
+										{item.nome_cliente}
 									</Text>
 									<View
 										style={{

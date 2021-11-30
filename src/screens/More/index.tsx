@@ -49,6 +49,16 @@ export function More({ navigation }: any) {
 					</IconRigth>
 				</OptionsContainer>
 
+				<OptionsContainer onPress={() => navigation.navigate('OptionScreen')}>
+					<IconContainer>
+						<Fontisto name="spinner-cog" size={26} color="#4A4B4D" />
+					</IconContainer>
+					<OptionsTitle>Opções de usuário</OptionsTitle>
+					<IconRigth>
+						<Entypo name="chevron-right" size={24} color="#7C7D7E" />
+					</IconRigth>
+				</OptionsContainer>
+
 				<OptionsContainer onPress={signOut}>
 					<IconContainer>
 						<MaterialIcons name="logout" size={25} color="#4A4B4D" />
