@@ -34,6 +34,8 @@ type AuthContextData = {
 	viewedOnboarding: any;
 	setViewedOnboarding: any;
 	checkOnboarding: () => void;
+	prestador_id: string;
+	setPrestador_id: React.Dispatch<React.SetStateAction<string>>;
 };
 
 type AuthProviderProps = {
@@ -45,6 +47,7 @@ const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 const AuthProvider = ({ children }: AuthProviderProps) => {
 	const [data, setData] = useState<AuthState>({} as AuthState);
 	const [loading, setLoading] = useState(true);
+	const [prestador_id, setPrestador_id] = useState('');
 
 	const [viewedOnboarding, setViewedOnboarding] = useState(false);
 
@@ -124,6 +127,8 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
 				viewedOnboarding,
 				setViewedOnboarding,
 				checkOnboarding,
+				setPrestador_id,
+				prestador_id,
 			}}
 		>
 			{children}

@@ -30,7 +30,9 @@ export const Profissional = () => {
 
 	const imageUrl = `http://${ipConfig}/files`;
 	function handleLinkToWhatsapp() {
-		Linking.openURL(`whatsapp://send?phone=55${item.user.telephone}`);
+		Linking.openURL(
+			`whatsapp://send?phone=55${item.user.telephone}&text="AAAAAAAA"`,
+		);
 	}
 
 	return (

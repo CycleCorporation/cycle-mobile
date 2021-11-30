@@ -173,9 +173,10 @@ export function Home() {
 					showsHorizontalScrollIndicator={false}
 					data={populares}
 					keyExtractor={(item) => item.id}
-					style={{ paddingHorizontal: 20 }}
+					style={{ paddingHorizontal: 30 }}
 					renderItem={({ item }) => (
 						<TouchableOpacity
+							onPress={() => navigation.navigate('Categoria', { item })}
 							style={{
 								alignItems: 'center',
 								justifyContent: 'center',

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FlatList, Image } from 'react-native';
+import { Alert, FlatList, Image } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/core';
 import { Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -28,11 +28,24 @@ export function Categoria() {
 
 	useEffect(() => {
 		const handleSearch = async () => {
-			const responseArea = await api.get('/prestadores/area', {
-				params: { areaAtuacao: item.nome },
-			});
+			try {
+				const responseArea = await api.get('/prestadores/area', {
+					params: { areaAtuacao: item.nome },
+				});
 
-			setPrestadores(responseArea.data);
+				setPrestadores(responseArea.data);
+
+				const responseProfissao = await api.get('/prestadores/profissao', {
+					params: { profissao: item.nome },
+				});
+
+				if (responseArea.data.length === 0) {
+					setPrestadores(responseProfissao.data);
+				}
+			} catch (error) {
+				Alert.alert('Erro', 'falha na pesquisa.');
+				console.log(error);
+			}
 		};
 
 		handleSearch();
