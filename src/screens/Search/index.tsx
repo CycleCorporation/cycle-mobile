@@ -81,9 +81,15 @@ export const Search = ({ navigation }) => {
 			<FlatList
 				data={prestadores}
 				style={{ marginTop: 40 }}
+				ItemSeparatorComponent={() => (
+					<View
+						style={{ height: 1, backgroundColor: '#c0c0c0', marginTop: 6 }}
+					/>
+				)}
 				keyExtractor={(prestador) => prestador.id}
 				renderItem={({ item }) => (
 					<PrestadorContainer
+						style={{marginVertical: 8}}
 						onPress={() => navigation.navigate('Profissional', { item })}
 						rippleColor="#dddddd"
 					>

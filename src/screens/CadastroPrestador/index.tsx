@@ -113,6 +113,7 @@ export function CadastroPrestador() {
 
 			navigation.navigate('TabPrestador');
 		} catch (error) {
+			console.log(error);
 			Alert.alert(
 				'Erro',
 				'Não foi possível se cadastrar como prestador. Tente novamente mais tarde',
@@ -179,6 +180,7 @@ export function CadastroPrestador() {
 								multiline
 								value={value}
 								numberOfLines={4}
+								style={{maxWidth: 350}}
 								textAlignVertical="top"
 								placeholder="Fale um pouco sobre você e sua profissão"
 							/>

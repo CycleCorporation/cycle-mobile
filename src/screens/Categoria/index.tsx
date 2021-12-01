@@ -85,6 +85,7 @@ export function Categoria() {
 				keyExtractor={(prestador) => prestador.id}
 				renderItem={({ item }) => (
 					<PrestadorContainer
+						style={{marginVertical: 8}}
 						onPress={() => navigation.navigate('Profissional', { item })}
 						rippleColor="#dddddd"
 					>
