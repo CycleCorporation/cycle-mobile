@@ -147,10 +147,14 @@ export const Profissional = () => {
 					</View>
 				</Modal>
 				<ImageContainer style={{ zIndex: -1 }}>
-					<Image
-						source={{ uri: `${imageUrl}/${item.user.user_image}` }}
-						style={{ width: 120, height: 120, borderRadius: 60 }}
-					/>
+					{item.user.user_image ? (
+						<Image
+							source={{ uri: `${imageUrl}/${item.user.user_image}` }}
+							style={{ width: 120, height: 120, borderRadius: 60 }}
+						/>
+					) : (
+						<FontAwesome5 name="user-alt" size={54} color="black" />
+					)}
 					<NameTitle>{item.user.name}</NameTitle>
 				</ImageContainer>
 				<Avaliation style={{ zIndex: -1 }}>

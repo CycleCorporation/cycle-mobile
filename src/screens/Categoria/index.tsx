@@ -13,6 +13,7 @@ import {
 import { AirbnbRating } from 'react-native-ratings';
 import { api } from '../../services/api';
 import { ipConfig } from '../../utils/ipVariable';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 type RouteProps = {
 	item: any;
@@ -76,16 +77,27 @@ export function Categoria() {
 			<FlatList
 				data={prestadores}
 				style={{ marginTop: 40 }}
+				ItemSeparatorComponent={() => (
+					<View
+						style={{ height: 1, backgroundColor: '#c0c0c0', marginTop: 6 }}
+					/>
+				)}
 				keyExtractor={(prestador) => prestador.id}
 				renderItem={({ item }) => (
 					<PrestadorContainer
 						onPress={() => navigation.navigate('Profissional', { item })}
 						rippleColor="#dddddd"
 					>
-						<Image
-							source={{ uri: `${imageUrl}/${item.user.user_image}` }}
-							style={{ width: 60, height: 60, borderRadius: 30 }}
-						/>
+						{item.user.user_image ? (
+							<Image
+								source={{ uri: `${imageUrl}/${item.user.user_image}` }}
+								style={{ width: 60, height: 60, borderRadius: 30 }}
+							/>
+						) : (
+							<View style={{ padding: 14 }}>
+								<FontAwesome5 name="user-alt" size={40} />
+							</View>
+						)}
 						<View style={{ paddingLeft: 20 }}>
 							<PrestadorTitle>{item.user.name}</PrestadorTitle>
 							<View
